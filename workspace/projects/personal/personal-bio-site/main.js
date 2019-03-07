@@ -1,7 +1,7 @@
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML += textToPrint;
-}
+    selectedDiv.innerHTML = textToPrint;
+};
 
 
 
@@ -10,7 +10,7 @@ const projects = [
 
     {
         title: "Cool Project1", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
@@ -19,7 +19,7 @@ const projects = [
       },
       {
         title: "Cool Project2", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: false,
@@ -28,7 +28,7 @@ const projects = [
       },
       {
         title: "Cool Project3", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
@@ -37,7 +37,7 @@ const projects = [
       },
       {
         title: "Cool Project4", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: false,
@@ -46,7 +46,7 @@ const projects = [
       },
       {
         title: "Cool Project5", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
@@ -56,25 +56,29 @@ const projects = [
 
 
 
-]
+];
 
 const createProjectCards = () =>
 {
     let domString = '';
         for (let i = 0; i < projects.length; i++)
         {
-            if (projects.available[i] = true)
-            {
-            domString += `<h3>${projects.title[i]}</h3>`;
-            domstring += `<img src='${projects.screenshot[i]}'>`;
-            domString += `<p>${projects.description[i]}</p>.`;
-            domString += `<p>Technologies used: ${projects.technologiesUsed[i]}</p>`;
-            domString += `<a href='${projects.url[i]}'></a>`
+         if(projects[i].available === true)  
+         {
+            domString += `<div class='card'>`
+            domString +=    `<h3>${projects[i].title}</h3>`;
+            domString +=    `<img src='${projects[i].screenshot}'>`;
+            domString +=    `<p>${projects[i].description}</p>.`;
+            domString +=    `<p>Technologies used: ${projects[i].technologiesUsed}</p>`;
+            domString +=    `<a href='${projects[i].url}'>Project URL:</a>`;
+            domString +=    `<a href='${projects[i].githubUrl}'>Project GitHub URL:</a>`;
+            domString += `</div>`
+         }
+            
 
-            } else return;
-
-        printToDom('',domString)
+        
         }
+        printToDom('projectsPage', domString);
 
 }
 

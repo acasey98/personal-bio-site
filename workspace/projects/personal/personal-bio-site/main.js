@@ -9,9 +9,9 @@ const printToDom = (divId, textToPrint) => {
 const projects = [
 
     {
-        title: "Cool Project1", 
-        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
-        description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
+        title: "the joy of debug", 
+        screenshot: "rly.png", 
+        description: "orignal meme dont not steal", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
         url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
@@ -19,7 +19,7 @@ const projects = [
       },
       {
         title: "Cool Project2", 
-        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
+        screenshot: "VAR.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: false,
@@ -28,7 +28,7 @@ const projects = [
       },
       {
         title: "Cool Project3", 
-        screenshot: "http://www.movingimage.us/images/homepage/features/jhe_jim_kermit.jpg", 
+        screenshot: "VAR.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
